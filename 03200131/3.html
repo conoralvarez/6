@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>学生进出校统计(查看)</title>
+  <style>
+	@font-face {
+	  font-family: "iconfont";
+	  src: url("iconfont.eot?t=1606650013519"); /* IE9 */
+	  src: url("iconfont.eot?t=1606650013519#iefix") format("embedded-opentype"),
+		/* IE6-IE8 */
+		  url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMgAAsAAAAAByQAAALRAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqBZIFXATYCJAMQCwoABCAFhG0HQhtDBsgekiQQKQUUlYq9ww6MEA/V2Ovbu/2ILlGAEix2fFUlgiMdW9U6lcgqQZKFAfrfNf0dsEObTSHB3U96K6QvzVABe1YEao7l7OYKqrUj7gGCzv8+z+X0rgEUyPx2lsvatmmsTfeiABMMdMzpCRRICXLD9PIlzvraagJdq+LorlTUtYGfpDsF4qnGhsGv45aSxdpCc2JkRrzhrV1elXsAr9Pn4zukRJuiUemeV++Xq1D0Sff5xMz/c32BIL/OBjaOij0giYeT4ds8BeN46v7GyyHQ1lb4pPtU/Xjy/5WJD0vNXx5FqESTzu6DfRSpfNI5isKnaorg80mWCj/E0K6iB8B1zJ7vVoSYBjUnU/TO2elwdNhsbXZ7u9PZiNPOnqSWQPHYPU2tlLWoytr2+lE425wNoxuHa1uhWNSUXlBQHDUOJXn8wX3iuLrdfq6Tj67jSmFyOzQ3N+PnZVm5vFz5a8UXl54rdfXiYjW+6vICbiJu1AdMuT3YAXWXeX4kTSCyEIY4kfThQVsrJAH8d5VfIgEoP5T3d9weaceDo7z/dmCCd89nSxX/Z9K7noNCk2+Wl25SekNQCiU0Zk7pJMV2r7R6OFjQNXb+I/uU+wrDgmcT2hYNipYVVG1rZLL30NCzj6a2I3TtqhzfMyN4iuxgxyJAGDtHMfQW1dgDmWwXGpbe0TSOiq5rETxjz0Y8CigVOCxRJSNTRFO4mVqzDMi5LcjGjMOirUzcDhRWzUeSE5L6sUo0o7iij3WcpUhJCRXcRCrAemg0cmIRfBQVmaCX0pKTmEinnpSgcBMEOCOgYRJSESOmEBoFZ0ZDfSlg8P4WiBljNEws0HLRDkiw0honkiVI2kBW6sybaL9yjtU4JoUkUQQlcCZEBbAhowlzhGW62SikkBLoDwQtciSiWnSrLuF5g6kApawKPUNGiRoZDc1nOCwUvbd3Cz7hS13xAgAAAAA=")
+		  format("woff2"),
+		url("iconfont.woff?t=1606650013519") format("woff"), url("iconfont.ttf?t=1606650013519") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */ url("iconfont.svg?t=1606650013519#iconfont") format("svg"); /* iOS 4.1- */
+	}
+
+	.iconfont {
+	  font-family: "iconfont" !important;
+	  font-size: 16px;
+	  font-style: normal;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+
+	.icon-search:before {
+	  content: "\e649";
+	}
+
+	.icon-arrow:before {
+	  content: "\e601";
+	}
+
+	.icon-arrow-r:before {
+	  content: "\e7a7";
+	}
+
+	body {
+	  margin: 0;
+	  background: #f0eff2;
+	}
+
+	.content {
+	  max-width: 500px;
+	  margin: 0 auto;
+	  position: relative;
+	}
+
+	.con-1 {
+	  position: absolute;
+	  width: 100%;
+	  z-index: 999;
+	  background: #f7f7f7;
+	  -webkit-box-shadow: 1px 5px 6px #e6e6e6;
+	  box-shadow: 1px 5px 6px #eaeaea;
+	}
+
+	.t-1 {
+	  text-align: center;
+	  padding: 10px 0;
+	  font-size: 15px;
+	}
+
+	.con-2 .i {
+	  position: relative;
+	  background: #fff;
+	  font-size: 15px;
+	  padding: 10px 15px;
+	  border-bottom: 1px solid #e1e1e1;
+	}
+
+	.c2 {
+	  padding-top: 43px;
+	}
+	
+	.iconfont.icon-1 {
+	  position: absolute;
+	  top: 12px;
+	  left: 15px;
+	  color: #227ef5;
+	}
+	
+	.iconfont.icon-2 {
+	  position: absolute;
+	  top: 12px;
+	  right: 15px;
+	  color: #227ef5;
+	}
+	
+	.iconfont.icon-3 {
+      position: absolute;
+      right: 15px;
+      top: 75px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content c1">
+  <div class="con-1">
+    <span class="iconfont icon-1">&#xe601;</span>
+	<div class="t-1">学生进出校统计(查看)</div>
+    <span class="iconfont icon-2">&#xe649;</span>
+  </div>
+  </div>
+  <div class="content c2">
+    <div class="con-2">
+      <div class="i">
+        <div class="t i-0">姓名：王蔚韬</div>
+        <div class="t i-1">工号：0703200131</div>
+        <div class="t i-2">部门：建筑工程分院</div>
+        <div class="t i-3">进出校时间：2020-11-29 21:30:21</div>
+        <div class="t i-4">状态：进校</div>
+        <div class="t i-5">登记人姓名：</div>
+        <div class="t i-6">登记人工号：</div>
+        <span class="iconfont icon-3">&#xe7a7;</span>
+      </div>
+      <div class="i">
+        <div class="t i-0">姓名：王蔚韬</div>
+        <div class="t i-1">工号：0703200131</div>
+        <div class="t i-2">部门：建筑工程分院</div>
+        <div class="t i-3">进出校时间：2020-11-29 11:30:11</div>
+        <div class="t i-4">状态：离校(到绍兴市区)</div>
+        <div class="t i-5">登记人姓名：</div>
+        <div class="t i-6">登记人工号：</div>
+        <span class="iconfont icon-3">&#xe7a7;</span>
+      </div>
+      <div class="i">
+        <div class="t i-0">姓名：王蔚韬</div>
+        <div class="t i-1">工号：0703200131</div>
+        <div class="t i-2">部门：建筑工程分院</div>
+        <div class="t i-3">进出校时间：2020-11-16 21:30:26</div>
+        <div class="t i-4">状态：进校</div>
+        <div class="t i-5">登记人姓名：</div>
+        <div class="t i-6">登记人工号：</div>
+        <span class="iconfont icon-3">&#xe7a7;</span>
+      </div>
+      <div class="i">
+        <div class="t i-0">姓名：王蔚韬</div>
+        <div class="t i-1">工号：0703200131</div>
+        <div class="t i-2">部门：建筑工程分院</div>
+        <div class="t i-3">进出校时间：2020-11-16 12:30:13</div>
+        <div class="t i-4">状态：离校(到绍兴市区)</div>
+        <div class="t i-5">登记人姓名：</div>
+        <div class="t i-6">登记人工号：</div>
+        <span class="iconfont icon-3">&#xe7a7;</span>
+      </div>
+      <div class="i">
+        <div class="t i-0">姓名：王蔚韬</div>
+        <div class="t i-1">工号：0703200131</div>
+        <div class="t i-2">部门：建筑工程分院</div>
+        <div class="t i-3">进出校时间：2020-11-10 21:30:13</div>
+        <div class="t i-4">状态：进校</div>
+        <div class="t i-5">登记人姓名：</div>
+        <div class="t i-6">登记人工号：</div>
+        <span class="iconfont icon-3">&#xe7a7;</span>
+      </div>
+      <div class="i">
+        <div class="t i-0">姓名：王蔚韬</div>
+        <div class="t i-1">工号：0703200131</div>
+        <div class="t i-2">部门：建筑工程分院</div>
+        <div class="t i-3">进出校时间：2020-11-10 13:30:13</div>
+        <div class="t i-4">状态：离校(到绍兴市区)</div>
+        <div class="t i-5">登记人姓名：</div>
+        <div class="t i-6">登记人工号：</div>
+        <span class="iconfont icon-3">&#xe7a7;</span>
+      </div>
+    </div>
+    <div class="con-3"></div>
+  </div>
+</body>
+
+</html>

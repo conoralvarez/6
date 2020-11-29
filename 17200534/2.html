@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>绍兴文理学院元培学院通行码</title>
+  <style>
+  body {
+    margin: 0;
+  }
+
+  .content {
+    max-width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .con-1,
+  .con-3 {
+    background: #008001;
+    text-align: center;
+  }
+
+  .con-1 {
+    height: 150px;
+  }
+
+  .con-3 {
+    height: 200px;
+  }
+
+  .t-1,
+  .i-1,
+  .i-2,
+  .i-3,
+  .i-5,
+  .i-6,
+  .i-9,
+  .i-11 {
+    font-weight: 600 !important;
+  }
+
+  .i-1,
+  .i-2,
+  .i-3 {
+    font-size: 22px;
+    padding-bottom: 6.5px;
+    text-align: left;
+  }
+
+  .t-1 {
+    font-size: 39px;
+    color: #fff;
+    padding-top: 6.5px;
+  }
+
+  .con-2 {
+    text-align: center;
+  }
+
+  .con-2 .i {
+    width: 90%;
+    max-width: 405px;
+    background: #fff;
+    margin: 0 auto;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    padding: 2px 6.5px;
+    border-radius: 6px;
+    z-index: 2;
+    -webkit-box-shadow: 2px 5px 9px #333;
+    box-shadow: 2px 5px 9px #333;
+  }
+
+  .con-2 img {
+    max-width: 233px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .i-5,
+  .i-10,
+  .i-11 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .i-5 {
+    color: #399CD2;
+  }
+
+  .i-6,
+  .i-9 {
+    font-size: 50px;
+  }
+
+  .i-10 {
+    color: #e21c21;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+
+  .i-11 {
+    color: #399CD2;
+    margin-top: 12px;
+  }
+
+  .con-3 {
+    margin-top: 520px;
+  }
+  
+  .i-11 a {
+    color: #399CD2;
+	text-decoration: none;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <div class="con-1">
+      <div class="t-1">进校码</div>
+    </div>
+    <div class="con-2">
+      <div class="i">
+        <div class="i-1">姓名：叶馥如</div>
+        <div class="i-2">部门：信息与机电工程分院</div>
+        <div class="i-3">工号：0417200534</div>
+        <div class="i-4"><img src="2.png"></div>
+        <div class="i-5">刷新</div>
+        <div class="i-6"><span id="e-1"></span>月<span id="e-2"></span>日</div>
+        <div class="i-9"><span id="e-3"></span></div>
+        <div class="i-10">您的健康码为绿码且当日体温正常，可以进校</div>
+        <div class="i-11"><a href="3.html">进出校记录查询</a></div>
+      </div>
+    </div>
+    <div class="con-3"></div>
+  </div>
+  <script>
+  var date = new Date();
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = date.getUTCDate();
+  document.getElementById("e-1").innerHTML = month;
+  document.getElementById("e-2").innerHTML = day;
+  var hour = setInterval(function() {
+    Timer();
+  }, 0);
+
+  function Timer() {
+    var d = new Date();
+    document.getElementById("e-3").innerHTML = d.toLocaleTimeString('chinese', { hour12: false });
+  }
+  </script>
+</body>
+
+</html>
